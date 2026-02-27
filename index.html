@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CodeAuction Round 1</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #ffffff;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 60px;
+            font-size: 42px;
+            letter-spacing: 2px;
+            color: #00ffe7;
+            text-shadow: 0 0 15px rgba(0, 255, 231, 0.6);
+        }
+
+        .rules-box {
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            margin: 50px auto;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 15px;
+            border: 1px solid rgba(0, 255, 231, 0.3);
+            box-shadow: 0 0 25px rgba(0, 255, 231, 0.2);
+            font-size: 18px;
+            text-align: left;
+        }
+
+        .rules-box h2 {
+            text-align: center;
+            color: #00ffe7;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 15px 0;
+            padding: 10px;
+            background: rgba(0, 255, 231, 0.08);
+            border-radius: 8px;
+        }
+
+        .btn {
+            display: block;
+            width: 260px;
+            margin: 30px auto;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            background: linear-gradient(45deg, #00ffe7, #00b3ff);
+            color: #000;
+            transition: 0.3s ease;
+            box-shadow: 0 0 15px rgba(0, 255, 231, 0.4);
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(0, 255, 231, 0.8);
+        }
+
+        #languageSection {
+            display: none;
+        }
+
+        .footer {
+            margin-top: 60px;
+            font-size: 14px;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>⚡ CodeAuction Round 1 ⚡</h1>
+
+    <div class="rules-box" id="rulesSection">
+        <h2>📜 Round Details</h2>
+        <ul>
+            <li><strong>Number of Questions:</strong> 15</li>
+            <li><strong>Time Limit:</strong> 25 Minutes</li>
+            <li><strong>Select any one language:</strong> C / C++ / Java</li>
+        </ul>
+
+        <button class="btn" onclick="acceptRules()">Proceed to Language Selection</button>
+    </div>
+
+    <div id="languageSection">
+        <h2 style="color:#00ffe7;">🚀 Select Your Language</h2>
+
+        <button class="btn" onclick="redirectC()">C Language</button>
+        <button class="btn" onclick="redirectCPP()">C++ Language</button>
+        <button class="btn" onclick="redirectJava()">Java Language</button>
+    </div>
+
+    <div class="footer">
+        © 2026 CodeAuction | Battle of Logic & Speed
+    </div>
+
+    <script>
+        function acceptRules() {
+            document.getElementById("rulesSection").style.display = "none";
+            document.getElementById("languageSection").style.display = "block";
+        }
+
+        function redirectC() {
+            if (confirm("Are you sure you want to select C? You cannot change later.")) {
+                window.location.href = "https://forms.gle/tD6sQA87BYfRRogv7";
+            }
+        }
+
+        function redirectCPP() {
+            if (confirm("Are you sure you want to select C++? You cannot change later.")) {
+                window.location.href = "https://forms.gle/7Tfd8tNYzPWX3Vw38";
+            }
+        }
+
+        function redirectJava() {
+            if (confirm("Are you sure you want to select Java? You cannot change later.")) {
+                window.location.href = "https://forms.gle/CLcmPbDa2QWRgSnq8";
+            }
+        }
+    </script>
+
+</body>
+</html>
